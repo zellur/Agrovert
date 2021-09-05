@@ -114,8 +114,16 @@ public class UserController {
 					Weather week_avg = WeekAvg(today, 0);
 					Weather lastweek_avg = WeekAvg(today, 1);
 					Weather year_avg = YearAvg(today, 0);
-					Weather lastyear_avg = YearAvg(today, 1);				
-					
+					Weather lastyear_avg = YearAvg(today, 1);
+
+//					Weather today = new Weather();
+////					Optional<Weather> temp = weatherService.findById(today.getId()-1);
+//					Weather yesterday = new Weather();
+//					Weather week_avg = new Weather();
+//					Weather lastweek_avg = new Weather();
+//					Weather year_avg = new Weather();
+//					Weather lastyear_avg = new Weather();
+
 					model.addAttribute("today", today);
 					model.addAttribute("yesterday", yesterday);
 					model.addAttribute("lastweek_avg", lastweek_avg);

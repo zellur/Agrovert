@@ -89,7 +89,7 @@ body {
  
   width: 280px;
   height: 100vh;
-  background: #000000;
+  background: #505050;
  
 }
 
@@ -103,16 +103,24 @@ margin: 0;
 .menuBackground li {
 width:89%;
 
-padding: 21px;
-margin: 30px;
+padding: 15px;
+/*margin: 5px;*/
  float:left;
- border-bottom: 2px solid black;
- border-width: 60%;
+ /*border-bottom: 2px solid black;*/
+ /*border-width: 60%;*/
   list-style-type: none;
+    border-bottom: dotted;
+}
+
+.menuBackground li a {
+    color: white;
+}
+.menuBackground li a:hover {
+    color: #b0b435;
 }
 
 h4 {text-align: center;
-top: 115px;
+    top: 115px;
     position: absolute;
     left: 856px;
     
@@ -120,7 +128,7 @@ top: 115px;
 
 #homeBcakground{
 
- background-image: url('/images/img1.jpg');
+ background-image: url('/images/img4.jpg');
   background-repeat: no-repeat;
   z-index: -1;
   background-size: 40%;
@@ -128,7 +136,7 @@ top: 115px;
 }
 
 .div1{
-top: 284px;
+    top: 284px;
     position: absolute;
     left: 434px;
     size: 50%;

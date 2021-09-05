@@ -27,7 +27,12 @@ public class WeatherServiceImpl implements WeatherService{
 	@Override
 	public Weather getWeatherByMaxId() {
 		// TODO Auto-generated method stub
-		return weatherRepository.getWeatherByMaxId();
+		try {
+			Weather weather = weatherRepository.getWeatherByMaxId();
+			return weather;
+		} catch (Exception c) {
+			return null;
+		}
 	}
 
 	@Override
