@@ -3,18 +3,12 @@ package com.example.AgroVert.controller;
 
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.example.AgroVert.repository.WeatherRepository;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,6 +47,9 @@ public class UserController {
 
 	@Autowired
 	WeatherService weatherService;
+
+	@Autowired
+	WeatherRepository weatherRepository;
 
 
 
@@ -305,6 +302,21 @@ public class UserController {
 
 
 		return "gallery";
+	}
+
+	@RequestMapping("/charts")
+	public String charts(Model model){
+		model.addAttribute("chartData", getChartData());
+		return "charts";
+	}
+
+
+	private List<List<Object>> getChartData() {
+		return Arrays.asList(
+				Arrays.asList("2021", weatherRepository.getAvg2021()),
+				Arrays.asList("2020", weatherRepository.getAvg2020()),
+				Arrays.asList("2019", weatherRepository.getAvg2029())
+		);
 	}
 
 	@RequestMapping("/connexion")  
