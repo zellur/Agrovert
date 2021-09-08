@@ -313,9 +313,9 @@ public class UserController {
 
 	private List<List<Object>> getChartData() {
 		return Arrays.asList(
-				Arrays.asList("2021", weatherRepository.getAvg2021()),
-				Arrays.asList("2020", weatherRepository.getAvg2020()),
-				Arrays.asList("2019", weatherRepository.getAvg2029())
+				Arrays.asList("2021", weatherRepository.getAvg2021(), 12),
+				Arrays.asList("2020", weatherRepository.getAvg2020(), 14),
+				Arrays.asList("2019", weatherRepository.getAvg2029(), 13)
 		);
 	}
 
